@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>舆情</title>
+
+<link type="text/css" rel="stylesheet" href="css/css.css">
+
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/index.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">	
+<link rel="stylesheet" type="text/css" href="css/index.css">
+
+<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+	background-image:url(img/beijing.jpg);
+}
+
+
+header {
+    border:1px solid;
+	height:100px;
+	background-color:#E0FFFF;
+	text-align:center;
+	font-size:2.5em;
+    padding-top:20px;
+
+}
+
+.gtj .dropdown {
+    float: left;
+	
+}
+.gtj {
+    
+	height:60px;
+    margin-top:1px;
+	
+}
+//.wenzi {
+    float:left;
+	width:280px;
+	height:450px;
+	margin-left:50px;
+	margin-top:30px;
+	
+    background-color:white;
+}
+//
+.dropdown button {
+    width:150px;
+	height:100px;
+}
+
+
+
+
+
+
+
+
+.denglu {
+    float: right;
+	display: inline-block;
+    color: white;
+	
+    text-align: center;
+    padding: 10px 30px;
+	margin-top:0px;
+    text-decoration: none;
+	position:relative;
+}
+
+footer {
+    border:1px;
+	background-color:#8B8386;
+	color:white;
+	text-align:center;
+	line-height:50px;
+	height:50px;
+}
+
+</style>
+</head>
+<body>
+
+<header>网络舆情分析</header>
+
+<div class="gtj">
+    <div class="dropdown">
+
+        <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" 
+			data-toggle="dropdown">
+		    信息采集
+		    <span class="caret"></span>
+	    </button>
+	    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+		    <li role="presentation">
+			    <a role="menuitem" tabindex="-1" href="ECharts1.html" target="_blank">Java</a>
+		    </li>
+		    <li role="presentation">
+			    <a role="menuitem" tabindex="-1" href="ECharts2.html" target="_blank">数据挖掘</a>
+		    </li>
+		    <li role="presentation">
+			    <a role="menuitem" tabindex="-1" href="ECharts3.html" target="_blank">数据通信/网络</a>
+		    </li>
+		    <li role="presentation" class="divider"></li>
+		    <li role="presentation">
+			    <a role="menuitem" tabindex="-1" href="#">分离的链接</a>
+		    </li>
+	    </ul>
+    </div>
+
+    <div class="dropdown">
+
+        <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" 
+			data-toggle="dropdown">
+		    信息分析
+		    <span class="caret"></span>
+	    </button>
+	    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+		    <li role="presentation">
+			    <a role="menuitem" tabindex="-1" href="#">Java</a>
+		    </li>
+		    <li role="presentation">
+			    <a role="menuitem" tabindex="-1" href="#">数据挖掘</a>
+		    </li>
+		    <li role="presentation">
+			    <a role="menuitem" tabindex="-1" href="#">数据通信/网络</a>
+		    </li>
+		    <li role="presentation" class="divider"></li>
+		    <li role="presentation">
+			    <a role="menuitem" tabindex="-1" href="#">分离的链接</a>
+		    </li>
+	    </ul>
+    </div>
+
+    <div class="dropdown">
+
+        <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" 
+			data-toggle="dropdown">
+		    舆情引导
+		    <span class="caret"></span>
+	    </button>
+	    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+		    <li role="presentation">
+			    <a role="menuitem" tabindex="-1" href="#">Java</a>
+		    </li>
+		    <li role="presentation">
+			    <a role="menuitem" tabindex="-1" href="#">数据挖掘</a>
+		    </li>
+		    <li role="presentation">
+			    <a role="menuitem" tabindex="-1" href="#">数据通信/网络</a>
+		    </li>
+		    <li role="presentation" class="divider"></li>
+		    <li role="presentation">
+			    <a role="menuitem" tabindex="-1" href="#">分离的链接</a>
+		    </li>
+	    </ul>
+    </div>
+	<div class="denglu"><a class="a globalLoginBtn">登录</a></div>
+</div>
+ 
+
+
+
+<div class="wenzi">
+    
+
+</div>
+
+
+<div class="box" >
+	<!-- 存放大图的容器-->
+	<div class="all" >
+		<div class="top-img">
+			<div class="activeimg">
+				<img src="img/1.jpg">
+				<img src="img/2.jpg">
+				<img src="img/3.jpg">
+				<img src="img/4.jpg">
+				<img src="img/5.jpg">
+			</div>
+			<div class="left"><img src="img/left.png"> </div>
+			<div class="right"><img src="img/right.png"></div>
+		</div>
+		<!-- 存放缩略图的容器-->
+		<div class="bot-img">
+			<ul>
+				<li class="active"><img src="img/1.jpg"> </li>
+				<li><img src="img/2.jpg"> </li>
+				<li><img src="img/3.jpg"> </li>
+				<li><img src="img/4.jpg"> </li>
+				<li><img src="img/5.jpg"> </li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<footer>欢迎光临我的网站！</footer>
+
+<div class="modal fade" id="loginModal" style="display:none;">
+	
+	<div class="modal-dialog modal-sm" style="width:540px;">
+		<div class="modal-content" style="border:none;">
+			<div class="col-left"></div>
+			<div class="col-right">
+				<div class="modal-header">
+					<button type="button" id="login_close" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="loginModalLabel" style="font-size: 18px;">登录</h4>
+				</div>
+				<div class="modal-body">
+					<section class="box-login v5-input-txt" id="box-login">
+						<form id="login_form" action="" method="post" autocomplete="off">
+							
+							<ul>
+								<li class="form-group"><input class="form-control" id="id_account_l" maxlength="50" name="account_l" placeholder="请输入邮箱账号/手机号" type="text"></li>
+								<li class="form-group"><input class="form-control" id="id_password_l" name="password_l" placeholder="请输入密码" type="password"></li>
+							</ul>
+						</form>
+						<p class="good-tips marginB10"><a id="btnForgetpsw" class="fr">忘记密码？</a>还没有账号？<a href="javascript:;" target="_blank" id="btnRegister">立即注册</a></p>
+						<div class="login-box marginB10">
+							<button id="login_btn" type="button" class="btn btn-micv5 btn-block globalLogin">登录</button>
+							<div id="login-form-tips" class="tips-error bg-danger" style="display: none;">错误提示</div>
+						</div>
+
+						
+						<div class="threeLogin"><span>其他方式登录</span><a class="nqq" href="javascript:;"></a><a class="nwx" href="javascript:;"></a><!--<a class="nwb"></a>--></div>
+						
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>		
+
+<script type="text/javascript" src="js/jquery2.2.2.min.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+</body>
+</html>
