@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>blablabla</title>
+<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/echarts.min.js"></script>
+<style>
+/* Custom Styles */
+    .container {
+	    margin-left: 0px;
+	}
+    ul.nav-tabs{
+        width: 230px;
+		height: 500px;
+		
+        margin-left: 1px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+    }
+    ul.nav-tabs li{
+        margin: 0;
+        border-top: 1px solid #ddd;
+		height:50px;
+		background-color:#4A708B;
+    }
+    ul.nav-tabs li:first-child{
+        border-top: none;
+    }
+    ul.nav-tabs li a{
+        margin: 0;
+        padding: 8px 16px;
+        border-radius: 1px;
+		height:50px;
+		color:white;
+    }
+    ul.nav-tabs li.active a, ul.nav-tabs li.active {
+        color: black;
+        background: white;
+        border: 1px solid white;
+		
+    }
+	ul li a:hover {
+	    color:black;
+		
+	}
+	
+    ul.nav-tabs li:first-child a{
+        border-radius: 4px 4px 0 0;
+    }
+    ul.nav-tabs li:last-child a{
+        border-radius: 0 0 4px 4px;
+    }
+    ul.nav-tabs.affix{
+        top: 30px; /* Set the top position of pinned element */
+    }
+	
+</style>
+<script language="javascript" type="text/javascript" src="js/head(wo).js"></script>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy">
+<div class="container">
+  
+    <div class="row">
+        <div class="col-xs-3" id="myScrollspy">
+            <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
+                <li><a href="new 1.html"><span class="glyphicon glyphicon-tint" style="color: rgb(255, 115, 127); font-size: 18px;"> 第一部分</span></a></li>
+                <li><a href="new 2.html"><span class="glyphicon glyphicon-euro" style="color: rgb(255, 115, 127); font-size: 18px;"> 第二部分</span></a></li>
+                <li><a href="new 3.html"><span class="glyphicon glyphicon-envelope" style="color: rgb(255, 115, 127); font-size: 18px;"> 第三部分</span></a></li>
+                <li class="active"><a href="new 4.html"><span class="glyphicon glyphicon-film" style="color: rgb(255, 115, 127); font-size: 18px;"> 第四部分</span></a></li>
+                <li><a href="new 5.html"><span class="glyphicon glyphicon-tag" style="color: rgb(255, 115, 127); font-size: 18px;"> 第五部分</span></a></li>
+				<li><a href="new 6.html"><span class="glyphicon glyphicon-link" style="color: rgb(255, 115, 127); font-size: 18px;"> 第六部分</span></a></li>
+				<li><a href="new 7.html"><span class="glyphicon glyphicon-stats" style="color: rgb(255, 115, 127); font-size: 18px;"> 第七部分</span></a></li>
+				<li><a href="new 8.html"><span class="glyphicon glyphicon-book" style="color: rgb(255, 115, 127); font-size: 18px;"> 第八部分</span></a></li>
+				<li><a href="new 9.html"><span class="glyphicon glyphicon-bullhorn" style="color: rgb(255, 115, 127); font-size: 18px;"> 第九部分</span></a></li>
+				<li><a href="new 10.html"><span class="glyphicon glyphicon-home" style="color: rgb(255, 115, 127); font-size: 18px;"> 第十部分</span></a></li>
+            </ul>
+        </div>
+        <div class="col-xs-9">
+		<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" class="first" style="width: 600px;height:400px;"></div>
+	<div id="main2" class="second" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart1 = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option1 = {
+            title: {
+                text: 'ECharts 入门示例'
+            },
+            tooltip: {},
+            legend: {
+                data:['销量']
+            },
+            xAxis: {
+                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+            },
+            yAxis: {},
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart1.setOption(option1);
+    </script>
+	
+    
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart2 = echarts.init(document.getElementById('main2'));
+
+        // 指定图表的配置项和数据
+        var option2 = {
+            xAxis: {
+                type: 'category',
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [{
+                data: [820, 932, 901, 934, 1290, 1330, 1320],
+                type: 'line'
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart2.setOption(option2);
+    </script>
+	        </div>
+    </div>
+	
+	
+</div>
+<script language="javascript" type="text/javascript" src="js/foot(wo).js"></script>
+</body>
+</html>

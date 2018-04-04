@@ -13,7 +13,7 @@ document.writeln("    box-sizing: border-box;");
 document.writeln("}");
 document.writeln("body {");
 document.writeln("    margin: 0;");
-document.writeln("	background-image:url(img/beijing.jpg);");
+document.writeln("	background-color:#F0FFF0;");
 document.writeln("}");
 document.writeln("");
 document.writeln("");
